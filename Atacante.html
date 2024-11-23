@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores </title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            width: 200px;
+            background-color: #05186f16;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .control-button {
+            background-color: #444;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .control-button:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Selecciona tu Operador</h1>
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <!-- Tarjetas combinadas de defensores y atacantes -->
+                <div class="card kapkan">
+                    <a href="kapkan.html">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7MofnDHeL1uwsenBVjxplQ/1e5af8fe9cf6f36516c7f6e5d56fcac0/r6-operators-list-kapkan.png" alt="Kapkan">
+                        <h3>Kapkan</h3>
+                        <p>Especialista en trampas.</p>
+                    </a>
+                </div>
+                <div class="card frost">
+                    <a href="frost.html">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/33qvDwvWy7y9VGw9k1RYWi/73c4b6e46575b2b649058e2e626c223a/r6-operators-list-frost.png" alt="Frost">
+                        <h3>Frost</h3>
+                        <p>Trampas de sujeción.</p>
+                    </a>
+                </div>
+                <div class="card azami">
+                    <a href="azami.html">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5M7OGhXfAf5Q0Cdo1YJkRE/2e4c141357cf97d54c6840ee38f6bf76/r6s-operators-list-azami.png" alt="Azami">
+                        <h3>Azami</h3>
+                        <p>Barreras instantáneas.</p>
+                    </a>
+                </div>
+                <div class="card fuze">
+                    <a href="fuze.html">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/BsiNYFp7htro1mOEgiKf1/eef48a78d9a7c1cb2dcac07e1d06edb1/r6-operators-list-fuze.png" alt="Fuze">
+                        <h3>Fuze</h3>
+                        <p>Cargas de racimo.</p>
+                    </a>
+                </div>
+                <div class="card lion">
+                    <a href="lion.html">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4wYSIOO4AKq0nw1GbulGns/fcd32bda72facd7062a25ad3764f21e9/r6-operators-list-lion.png" alt="Lion">
+                        <h3>Lion</h3>
+                        <p>Dron de detección.</p>
+                    </a>
+                </div>
+                <div class="card ying">
+                    <a href="ying.html">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/36BxtuVTQFrNh2OPyJ2px3/6db32fa8151b9a925acdd65d289bcf0f/r6-operators-list-ying.png" alt="Ying">
+                        <h3>Ying</h3>
+                        <p>Granadas cegadoras.</p>
+                    </a>
+                </div>
+                <div class="card valkyrie">
+                    <a href="valkyrie.html">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7xN3HJXPLVEmWA9PDnQzTV/613b19a897503161f2cf6fe7bbe3408e/r6-operators-list-valkyrie.png" alt="Valkyrie">
+                        <h3>Valkyrie</h3>
+                        <p>Cámaras de vigilancia en puntos clave.</p>
+                    </a>
+                </div>
+                <div class="card caveira">
+                    <a href="caveira.html">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4RZ2Vwk7HozKMCtS5gFMp7/e1b930e3c80590a316939d9df0d88660/r6-operators-list-caveira.png" alt="Caveira">
+                        <h3>Caveira</h3>
+                        <p>Experta en emboscadas y sigilo.</p>
+                    </a>
+                </div>
+                <div class="card deimos">
+                    <a href="deimos.html">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2TV52rbjzuWtMGezWio1ox/2ec949f545995fc79fb3dc393a650992/r6s-operators-list-deimos.png" alt="Deimos">
+                        <h3>Deimos</h3>
+                        <p>Habilidades de ataque táctico preciso.</p>
+                    </a>
+                </div>
+                <div class="card capitao">
+                    <a href="capitao.html">
+                        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3AZlhNFA21aKL2MdAIEwa8/abfce9018a7a08c120d707fbc28ae709/r6-operators-list-capitao.png" alt="Capitão">
+                        <h3>Capitão</h3>
+                        <p>Control de área con fuego y humo.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="control-button" onclick="scrollCarousel(-1)">&#8249; Anterior</button>
+            <button class="control-button" onclick="scrollCarousel(1)">Siguiente &#8250;</button>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        let scrollPosition = 0;
+
+        function scrollCarousel(direction) {
+            const cardWidth = 240; // Ancho de la tarjeta (incluyendo margen)
+            const totalCards = carousel.children.length;
+            const maxScroll = (totalCards - 1) * cardWidth;
+
+            // Actualizar posición
+            scrollPosition += direction * cardWidth;
+
+            // Limitar dentro del rango
+            if (scrollPosition < 0) scrollPosition = maxScroll;
+            if (scrollPosition > maxScroll) scrollPosition = 0;
+
+            // Aplicar transformación
+            carousel.style.transform = `translateX(-${scrollPosition}px)`;
+        }
+    </script>
+</body>
+</html>

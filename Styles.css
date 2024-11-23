@@ -1,0 +1,369 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Archivo Black', sans-serif;
+    background-image: url('https://i0.wp.com/i.redd.it/f9qwtceyhyr41.jpg?ssl=1');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f0f0f0;
+    
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: #1a1a1a;
+}
+
+.intro {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: center;
+    max-width: 600px;
+    margin: 15px auto 30px;
+    line-height: 1.5;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.508); /* Fondo más oscuro y opaco */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque de fondo */
+}
+/* Imagen entre el título y el párrafo */
+.header-image {
+    width: 100%;               /* La imagen ocupa el ancho completo del contenedor */
+    max-width: 600px;          /* Ancho máximo */
+    height: auto;              /* Mantiene la proporción */
+    margin: 20px auto;            /* Espaciado arriba y abajo */
+    display: block;             /* Cambiar a bloque para centrar */
+    border-radius: 10px;       /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+}
+
+
+
+/* Fondo de superposición oscura */
+.infographic-container {
+    text-align: center;
+    max-width: 90%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto decorativo para h1 */
+h1 {
+    font-size: 3rem;
+    width: 2;
+    letter-spacing: 1.5px;
+    color: #f0f0f0;
+    text-shadow: 0 0 10px rgba(0, 157, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.2); /* Efecto de resplandor */
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.275); /* Fondo más oscuro y opaco */
+    border-radius: 12px; /* Bordes redondeados */
+    padding-left:10px;
+    padding-right:10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque de fondo */
+}
+
+/* Brillo intermitente */
+@keyframes glow {
+    0% {
+        text-shadow:
+            0 0 10px rgba(1, 1, 161, 0.6), 
+            0 0 15px rgba(1, 1, 161, 0.5),
+            0 0 25px rgba(1, 1, 161, 0.4),
+            0 0 40px rgba(1, 1, 161, 0.3),
+            0 0 50px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        text-shadow:
+            0 0 20px rgba(0, 94, 255, 0.8),
+            0 0 30px rgba(0, 94, 255, 0.6),
+            0 0 40px rgba(0, 94, 255, 0.5),
+            0 0 60px rgba(255, 255, 255, 0.4),
+            0 0 80px rgba(255, 255, 255, 0.3);
+    }
+}
+
+
+/* Efecto de desvanecimiento desde los bordes */
+h1:before,
+h1:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: rgba(0, 157, 255, 0.6);
+    border-radius: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: slide 2s infinite;
+}
+
+h1:before {
+    left: 0;
+}
+
+h1:after {
+    right: 0;
+    animation-delay: 1s;
+}
+
+@keyframes slide {
+    0%, 100% {
+        width: 0%;
+    }
+    50% {
+        width: 50%;
+    }
+}
+
+p {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+/* Contenedor del Carrusel */
+.carousel-container {
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+}
+
+/* Sección de Defensa y Ataque */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Estilo para las Cartas */
+.card {
+    position: relative;
+    width: 240px;
+    height: 520px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #dddddd;
+    padding: 0 10px 10px;
+    text-align: center;
+}
+
+
+
+.card:hover h3,
+.card:hover p {
+    color: #ffffff;
+}
+
+/* Estilos generales para enlaces */
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.link-button {
+    background-color: rgba(6, 0, 193, 0.37);
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.link-button:hover {
+    background-color: rgba(6, 0, 193, 0.6);
+    transform: scale(1.1) rotate(1deg);
+}
+
+.link-button:active {
+    transform: scale(0.95);
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        height: auto;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.271);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.327);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.card {
+    flex: 0 0 calc(100% / 2); /* Tres tarjetas visibles por vez */
+    max-width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-container .control-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-container .control-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+.carousel-container .prev {
+    left: 10px;
+}
+
+.carousel-container .next {
+    right: 10px;
+}
+
+
+.card {
+    flex: 0 0 auto;
+    width: 200px;
+    background-color: #0f0f586a;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.control-button {
+    background-color: rgba(6, 0, 193, 0.37);
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.control-button:hover {
+    background-color: rgba(6, 0, 193, 0.6);
+    transform: scale(1.1) rotate(1deg);
+}
+
+
+.control-button:active {
+    transform: scale(0.95);
+}
+

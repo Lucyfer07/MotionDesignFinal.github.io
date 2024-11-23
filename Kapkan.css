@@ -1,0 +1,132 @@
+/* Variables de color */
+:root {
+    --primary-bg-color: #1a1a1a;
+    --secondary-bg-color: rgba(0, 0, 0, 0.85);
+    --highlight-color: rgba(6, 0, 193, 0.347);
+    --highlight-hover: rgba(6, 0, 193, 0.329);
+    --text-color: #f0f0f0;
+    --secondary-text-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --glow-color: rgba(0, 157, 255, 0.6);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Archivo Black', sans-serif;
+    background-image: url('https://i0.wp.com/i.redd.it/f9qwtceyhyr41.jpg?ssl=1');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: var(--primary-bg-color);
+}
+
+.container {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: center;
+    max-width: 600px;
+    margin: 15px auto 30px;
+    line-height: 1.5;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.307); /* Fondo más oscuro y opaco */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque de fondo */
+}
+
+/* Título del agente */
+header h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+    text-shadow: 0 0 10px var(--glow-color), 0 0 20px rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Estilo del contenedor de video */
+.agent-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Estilo del iframe de video */
+.agent-video iframe {
+    width: 100%;               /* Ocupa el ancho completo del contenedor */
+    max-width: 800px;           /* Ancho máximo */
+    height: 450px;              /* Altura del video, ajustable */
+    border-radius: 10px;        /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    border: none;               /* Sin borde */
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+/* Efecto hover para el video */
+.agent-video iframe:hover {
+    transform: scale(1.02); /* Ligero zoom al pasar el mouse */
+}
+
+
+/* Descripción del agente */
+.agent-description {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+}
+
+/* Enlace de retorno */
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: var(--highlight-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: var(--highlight-hover);
+    transform: scale(1.05);
+}
+
+/* Animación de brillo para el título */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(1, 1, 161, 0.6), 0 0 15px rgba(1, 1, 161, 0.5),
+                     0 0 25px rgba(1, 1, 161, 0.4), 0 0 40px rgba(1, 1, 161, 0.3),
+                     0 0 50px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 94, 255, 0.8), 0 0 30px rgba(0, 94, 255, 0.6),
+                     0 0 40px rgba(0, 94, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.4),
+                     0 0 80px rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .agent-description {
+        font-size: 0.9rem;
+    }
+}
